@@ -8,6 +8,7 @@ header {
     background-color: #010A13;
     align-items: center;
     padding: 10px 20px;
+    width: 100%;
 }
 
 .logo{
@@ -24,8 +25,11 @@ header {
     list-style-type: none;
     color: white;
     display: flex;
-    margin-right: 5%;  
+    margin-right: 10%;
+    width: 50%;
+    justify-content: space-between;
 }
+
 
 
 
