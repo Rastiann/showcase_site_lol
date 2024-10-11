@@ -57,18 +57,18 @@ header {
     justify-content: center;
     align-items: center;
     z-index: 5;
-    margin-right: 12%;
+    /*margin-right: 12%;*/
 }
 
 .navbar ul {
     list-style-type: none;
     display: flex;
-    margin: 0;
+    margin: 0 10%;
     padding: 0;
     justify-content: space-around;
     gap: 40px;
-    width: 60%;
-    margin-right: 15%;
+    width: 50%;
+    
 }
 .navbar ul li {
     position: relative;
@@ -108,27 +108,6 @@ li a{
     text-decoration: none;
     color: #F0E6D2;
 }
-
-.search {
-    width: 200px;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #c8aa6e;
-    border-radius: 8px;
-    background-color: #1c1b1b;
-    color: #fff;
-    outline: none;
-    transition: all 0.3s ease;
-    margin-left: 10px;
-    position: absolute;
-    right: 20px;
-}
-
-.search:focus {
-    border-color: #383838;
-    box-shadow: 0 0 10px #ffc21b;
-}
-
 .promo h1 {
     display: flex;
     flex-wrap: wrap; 
@@ -418,14 +397,17 @@ li a{
 }
 
 /*
-
------------------LOGIN---------------------
-
+--------------------------------------------------
+-----------------RIGHT NAVBAR---------------------
+--------------------------------------------------
 */
-div.log{
+div.rightnav{
     display: flex;
-    width: 15%;
-    justify-content:space-around;
+    min-width: 360px;
+    gap: 10%;
+    justify-content:space-between;
+    margin: 0 auto;
+    position: relative;
 }
 .icolog{
     width: 45px;
@@ -434,30 +416,66 @@ div.log{
     padding: 12px; 
     background-color: #F0E6D2;
     border-radius: 100% ;
-    position: relative;
+    
 }
 .icolog:hover{
     background-color: #0397AB;
 }
-.icolog:hover fieldset#F2{
+.clklog:focus ~ fieldset#F2{
     display: block;
 }
-/*------------------------*/
+.icobuy{
+    width: 45px;
+    height: 45px;
+    border:0;
+    padding: 12px; 
+    background-color: #F0E6D2;
+    border-radius: 100% ;
+    position: relative;
+}
+.icobuy:hover{
+    background-color: #0397AB;
+  }
+.icobuy:hover, .clkbuy:focus ~ .panier{
+    display: block;
+}
+.search {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #c8aa6e;
+    border-radius: 8px;
+    background-color: #1c1b1b;
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+    /*margin-left: 10px;
+    position: absolute;
+    right: 20px;*/
+}
+
+.search:focus {
+    border-color: #383838;
+    box-shadow: 0 0 10px #ffc21b;
+}
+
+/*-----------------LOGIN--------------------*/
 fieldset#F2{
     display: none;
     position: absolute;
     width: 400px;
+    padding: 15px;
     font-family: "QuadrataM";
     background-color: white;
-    border: 15px white solid ;
+    border: 0;
     /*border-top:15px solid #0397AB;*/
     border-radius: 20px;
     box-shadow: 5px 5px 5px #091428;
     font-size: 20px;
     text-align: center;
     color: #091428;
-    right: -180px;
-    top: 45px;
+    top: 52.5px;
+    right: 1%;
 }
 #sc{
     background-color:#005A82 ;
@@ -487,31 +505,12 @@ fieldset#F2{
 #cc:hover{
     background-color: #C89B3C;
 }
-/*
-
------------------PANIER---------------------
-
-*/
-.icobuy{
-    width: 45px;
-    height: 45px;
-    border:0;
-    padding: 12px; 
-    background-color: #F0E6D2;
-    border-radius: 100% ;
-}
-.icobuy:hover{
-    background-color: #0397AB;
-  }
-.icobuy:hover .panier{
-    display: block;
-}
-/*------------------------*/
-
+/*-----------------PANIER--------------------*/
 .panier{
     display: none;
     position: absolute;
-    width: 300px;
+    min-width: 300px;
+    max-width: 365px;
     height: 90%;
     font-family: "QuadrataM";
     background-color: white;
@@ -521,8 +520,8 @@ fieldset#F2{
     font-size: 20px;
     text-align: center;
     color: #091428;
-    right: 0%;
-    top: 52px;
+    /*right: 0%;*/
+    top : 45px;
 }
 h3{
     text-align: center;
@@ -533,27 +532,14 @@ h3{
     color: #091428;
     border-bottom: 2px solid #0397AB;
 }
-.panier{}
-
-
-
-
-
 /*
-
------------------INSCRPAGE---------- -----------
-
-
-
-
+--------------------------------------------------
+-----------------INSCR PAGE---------------------
+--------------------------------------------------
 */
 body.inscrpage{
     background-image: url(/image/lol_desktop_background_2x.jpg);
-    background-size: cover;
-
-
-
-}
+    background-size: cover;}
 h2{
     margin: 20px 0;
     text-align: center;
