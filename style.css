@@ -1,30 +1,36 @@
+@font-face {
+    font-family: "QuadrataR";
+    src:
+      local("Quadrata"),
+      url("/font/Friz\ Quadrata\ Regular.ttf") format("truetype");
+      
+  }
+  @font-face {
+    font-family: "QuadrataM";
+    src:
+      local("Quadrata"),
+      url("/font/Friz\ Quadrata\ Std\ Medium.otf") format("opentype");
+  }
+  @font-face {
+    font-family: "QuadrataB";
+    src:
+      local("Quadrata"),
+      url("/font/Friz\ Quadrata\ Bold.otf") format("opentype");
+      
+  }
+  @font-face {
+    font-family: "QuadrataI";
+    src:
+      local("Quadrata"),
+      url("/font/Friz\ Quadrata\ Italic.ttf") format("truetype");
+  }
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-
-@font-face {
-    font-family: "QuadrataB";
-    src: url("League-of-Legends-Font-2/Friz Quadrata Bold.otf") format("opentype");
-}
-
-@font-face {
-    font-family: "QuadrataI";
-    src: url("font/League-of-Legends-Font-2/Friz Quadrata Italic.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "QuadrataR";
-    src: url("font/League-of-Legends-Font-2/Friz Quadrata Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "QuadrataM";
-    src: url("font/League-of-Legends-Font-2/Friz Quadrata Std Medium.otf") format("opentype");
-}
-
-body {
+body{
     background-color: rgb(255, 255, 255);
     font-size: 16px;
     overflow-x: hidden;
@@ -56,12 +62,13 @@ header {
 
 .navbar ul {
     list-style-type: none;
-    color: white;
     display: flex;
     margin: 0;
     padding: 0;
     justify-content: space-around;
     gap: 40px;
+    width: 60%;
+    margin-right: 15%;
 }
 .navbar ul li {
     position: relative;
@@ -94,6 +101,12 @@ header {
 li {
     padding: 10px;
     font-family: "QuadrataR";
+    color: #F0E6D2;
+    text-transform: uppercase;
+}
+li a{
+    text-decoration: none;
+    color: #F0E6D2;
 }
 
 .search {
@@ -214,18 +227,14 @@ li {
     margin-top: 20px; 
     height: auto;
 }
-
 .boutique h1 {
     font-family: "QuadrataB";
     font-size: 60px;
 }
-
 .boutique p {
     font-family: "QuadrataR"; 
     font-size: 18px; 
 }
-
-
 .gridboutique {
     display: flex;
     flex-wrap: wrap;
@@ -233,7 +242,6 @@ li {
     gap: 20px; 
     padding: 20px; 
 }
-
 .gridboutique .box {
     background-image: url("image/TPA.jpg");
     background-size: cover;
@@ -249,12 +257,9 @@ li {
     transition: transform 0.3s ease; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
 }
-
 .gridboutique .box:hover {
     transform: scale(1.05); 
 }
-
-
 .gridboutique .box::before {
     content: ""; 
     position: absolute;
@@ -268,12 +273,9 @@ li {
     opacity: 0; 
     transition: opacity 0.3s ease; 
 }
-
 .gridboutique .box:hover::before {
     opacity: 1; 
 }
-
-
 .gridboutique .box p {
     position: relative; 
     z-index: 2; 
@@ -283,13 +285,6 @@ li {
     font-size: 18px; 
     text-align: center; 
 }
-
-
-
-
-
-
-
 .grid .case::before {
     content: ""; 
     position: absolute;
@@ -303,11 +298,9 @@ li {
     opacity: 0; 
     transition: opacity 0.3s ease; 
 }
-
 .grid .case:hover::before {
     opacity: 1;
 }
-
 .buy-button {
     font-family: 'Marcellus SC', serif;
     font-size: 15px;
@@ -404,5 +397,192 @@ li {
 @media screen and (max-width: 1000px) {
     .navbar ul {    
         display: none; 
+
     }
+    /*.navbar ico{
+        display block-size: ;
+    }*/
+}
+
+/*
+
+-----------------LOGIN---------------------
+
+*/
+div.log{
+    display: flex;
+    width: 15%;
+    justify-content:space-around;
+}
+.icolog{
+    width: 45px;
+    height: 45px;
+    border: 0;
+    padding: 12px; 
+    background-color: #F0E6D2;
+    border-radius: 100% ;
+    position: relative;
+}
+.icolog:hover{
+    background-color: #0397AB;
+}
+.icolog:hover fieldset#F2{
+    display: block;
+}
+/*------------------------*/
+fieldset#F2{
+    display: none;
+    position: absolute;
+    width: 400px;
+    font-family: "QuadrataM";
+    background-color: white;
+    border: 15px white solid ;
+    /*border-top:15px solid #0397AB;*/
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #091428;
+    font-size: 20px;
+    text-align: center;
+    color: #091428;
+    right: -180px;
+    top: 45px;
+}
+#sc{
+    background-color:#005A82 ;
+    border: 0;
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 5px 30px;
+    color: white;
+    font-family: "QuadrataM";
+    /*box-shadow: 4px 4px 7px black;*/
+    box-shadow: 0px 0px 2px #005A82;
+}
+#cc{
+    background-color:#785A28;
+    border: 0;
+    border-radius: 10px;
+    font-size: 17px;
+    padding: 5px 30px;
+    color: white;
+    font-family: "QuadrataM";
+    /*box-shadow: 4px 4px 7px black;*/
+    box-shadow: 0px 0px 2px #785A28;
+}
+#sc:hover{
+    background-color: #0397AB;
+}
+#cc:hover{
+    background-color: #C89B3C;
+}
+/*
+
+-----------------PANIER---------------------
+
+*/
+.icobuy{
+    width: 45px;
+    height: 45px;
+    border:0;
+    padding: 12px; 
+    background-color: #F0E6D2;
+    border-radius: 100% ;
+}
+.icobuy:hover{
+    background-color: #0397AB;
+  }
+.icobuy:hover .panier{
+    display: block;
+}
+/*------------------------*/
+
+.panier{
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: 90%;
+    font-family: "QuadrataM";
+    background-color: white;
+    border: 15px white solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #091428;
+    font-size: 20px;
+    text-align: center;
+    color: #091428;
+    right: 0%;
+    top: 52px;
+}
+h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "QuadrataM";
+    font-weight: bold;
+    font-size: 40px;
+    color: #091428;
+    border-bottom: 2px solid #0397AB;
+}
+.panier{}
+
+
+
+/*
+
+-----------------INSCRPAGE---------- -----------
+
+
+
+
+*/
+body.inscrpage{
+    background-image: url(/image/lol_desktop_background_2x.jpg);
+    background-size: cover;
+
+
+
+}
+h2{
+    margin: 20px 0;
+    text-align: center;
+    text-shadow: 5px 5px 5px black;
+    text-transform: uppercase;
+    font-family: "QuadrataM";
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
+}
+fieldset#F1{
+    width: 20%;
+    margin: 0 auto;
+    padding: 0 60px;
+    background-color: white;
+    border: 30px white solid;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px black;
+    /*text-align: left;*/
+    text-align: center;
+    font-family: "QuadrataM";
+    font-size: 20px;
+    color: #091428;
+}
+.submit{
+    background-color:#005A82 ;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px 30px;
+    color: white;
+    font-family: "QuadrataM";
+    border: 0;
+    /*box-shadow: 4px 4px 7px black;*/
+    box-shadow: 0px 0px 2px #005A82;
+}
+.submit:hover{
+    background-color:#0397AB ;
+}
+fieldset#F1 input:not(.submit){
+    border: none;
+    border-bottom: #785A28 solid 1px;
+    width: 170px;
+    margin-bottom: 15px;
+    /*text-align: center;*/
+    text-align: left;
+   
 }
