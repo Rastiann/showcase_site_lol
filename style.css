@@ -31,7 +31,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     font-size: 16px;
     overflow-x: hidden;
 }
@@ -47,8 +47,8 @@ header {
 }
 
 .logo {
-    width: 10%;
-    max-width: 120px;
+    width: 100px;
+   
 }
 
 .navbar {
@@ -112,9 +112,10 @@ li a{
     display: flex;
     flex-wrap: wrap; 
     font-family: "QuadrataB";
-    color: rgb(209, 209, 209);
+    color: rgb(170, 170, 170);
     font-size: 130px;
     flex-direction: column;
+    text-shadow: 5px 5px #2c2c2c;
 }
 
 .promo h1 span {
@@ -156,7 +157,6 @@ li a{
 
 .grid .case {
     flex: 0 1 calc(30% - 10px); 
-    background-image: url(".//image/ahri.png");
     background-size: cover;
     background-position: center;
     width: 120px;
@@ -173,14 +173,16 @@ li a{
     transition: transform 0.3s ease;
     position: relative;
     font-size: 14px; 
-    overflow: hidden; 
+    font-family: "QuadrataB";
 }
+
+
 
 .grid .case p {
     position: relative; 
-    z-index: 2;
+    z-index: 1;
     margin: 0; 
-    font-size: 12px; 
+    font-size: 18px; 
     display: none; 
     opacity: 0; 
     transition: opacity 0.3s ease;
@@ -235,6 +237,7 @@ li a{
     overflow: hidden; 
     transition: transform 0.3s ease; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+    flex-direction: column;
 }
 .gridboutique .box:hover {
     transform: scale(1.05); 
@@ -384,17 +387,61 @@ li a{
 }
 
 .mentions {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 2%;
+    font-family: "QuadrataM";
 }
 
-.reseaux img {
-    width: 5%;
-    height: 50%;
+.mentions .reseaux {
+    display: flex;
+    gap: 3%;
+    justify-content: center;
+    
 }
+
+.mentions .reseaux img {
+    width: 10%;
+    height: 2%;
+}
+
+.mentions .logo img {
+    width: 10%;    
+    height: 100%;
+    border-radius: 15%; 
+}
+
+.mentions .logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.mentions .légale {
+   color: white;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   padding: 1%;
+   width: 40%;
+   text-align: center;
+}
+
+.mentions .supplémentaire {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: space-around;
+    gap: 5%;
+    width: 100%;
+}
+
 
 /*
 --------------------------------------------------
@@ -539,7 +586,9 @@ h3{
 */
 body.inscrpage{
     background-image: url(/image/lol_desktop_background_2x.jpg);
-    background-size: cover;}
+    background-size: cover;
+}
+
 h2{
     margin: 20px 0;
     text-align: center;
