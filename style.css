@@ -29,7 +29,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
+
 body{
     background-color: white;
     font-size: 16px;
@@ -48,7 +50,6 @@ header {
 
 .logo {
     width: 100px;
-   
 }
 
 .navbar {
@@ -68,8 +69,8 @@ header {
     justify-content: space-around;
     gap: 40px;
     width: 50%;
-    
 }
+
 .navbar ul li {
     position: relative;
     padding: 10px 20px;
@@ -115,7 +116,7 @@ li a{
     color: rgb(170, 170, 170);
     font-size: 130px;
     flex-direction: column;
-    text-shadow: 5px 5px #2c2c2c;
+    text-shadow: 5px 5px #1a1a1a;
 }
 
 .promo h1 span {
@@ -145,7 +146,6 @@ li a{
     width: 80%; 
     max-width: 600px; 
     height: auto; 
-   
     background: inherit;
     border: 2px solid black;
     padding: 10px; 
@@ -166,7 +166,7 @@ li a{
     border: 2px solid #c8aa6e;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     color: black;
     padding: 5px; 
@@ -174,19 +174,24 @@ li a{
     position: relative;
     font-size: 14px; 
     font-family: "QuadrataB";
+    text-align: center;
 }
-
-
 
 .grid .case p {
-    position: relative; 
     z-index: 1;
     margin: 0; 
-    font-size: 18px; 
+    font-size: 16px;
     display: none; 
-    opacity: 0; 
+    opacity: 1; 
     transition: opacity 0.3s ease;
 }
+
+@media screen and (max-width: 768px) {
+    .grid .case p {
+        font-size: 12px;
+    }
+}
+
 
 .grid .case:hover p {
     display: block; 
@@ -224,7 +229,6 @@ li a{
     padding: 20px; 
 }
 .gridboutique .box {
-    background-image: url("image/TPA.jpg");
     background-size: cover;
     background-position: center;
     width: 30%; 
@@ -232,7 +236,7 @@ li a{
     border-radius: 10%; 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     position: relative; 
     overflow: hidden; 
     transition: transform 0.3s ease; 
@@ -266,6 +270,8 @@ li a{
     font-family: "QuadrataR"; 
     font-size: 18px; 
     text-align: center; 
+    display: none;
+    font-size: 25px;
 }
 .grid .case::before {
     content: ""; 
@@ -317,6 +323,11 @@ li a{
 .gridboutique .box:hover .buy-button {
     opacity: 1; 
     visibility: visible; 
+}
+
+.gridboutique .box:hover p {
+    opacity: 1; 
+    display: block; 
 }
 
 
@@ -410,10 +421,17 @@ li a{
     height: 2%;
 }
 
+.mentions  img {
+    width: 10%;
+    height: 2%;
+    cursor: pointer;
+}
+
+
 .mentions .logo img {
     width: 10%;    
     height: 100%;
-    border-radius: 15%; 
+    border-radius: 15%;
 }
 
 .mentions .logo {
@@ -431,15 +449,19 @@ li a{
    padding: 1%;
    width: 40%;
    text-align: center;
+   
 }
 
 .mentions .supplémentaire {
     display: flex;
     flex-direction: row;
-    color: white;
     justify-content: space-around;
     gap: 5%;
     width: 100%;
+}
+
+.mentions .supplémentaire p {
+    color: white;
 }
 
 
