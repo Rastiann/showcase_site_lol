@@ -384,17 +384,20 @@ li a{
         width: 80%;
         height: 150px;
     }
+    .menu, .panier, fieldset#F2{
+        margin : 63px 0;
+    }
+    .menu ul{
+        width: 100px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
-    .navbar ul {    
+    .navbar ul{    
         display: none; 
 
     }
-    .icomenu{
-        display: block;
-    }
-    .navbar ico{
+    .navbar .icomenu{
         display: block;
     }
 }
@@ -476,6 +479,7 @@ li a{
     height: 45px;
     border: 0;
     padding: 14px; 
+    margin: 0 auto 0 0;
     background-color: #F0E6D2;
     border-radius: 100% ;
 }
@@ -528,9 +532,9 @@ li a{
     display: none;
     flex-direction: column;
     width: 200px;
-    top: 43px;
+    top: -10px;
     background-color: white;
-    margin: 0 25px;
+    margin: 0 250px;
     z-index: 15;
     color: #F0E6D2;
     border: 2px solid #555;
@@ -543,12 +547,10 @@ li a{
 */
 div.rightnav{
     display: flex;
-    min-width: 360px;
+    min-width: 30%;
     gap: 10%;
     justify-content:space-between;
-    right: 50px;
-    
-    
+    right: 50px; 
 }
 .icolog{
     width: 45px;
@@ -583,7 +585,7 @@ div.rightnav{
     display: block;
 }
 .search {
-    width: 200px;
+    width: 50%;
     padding: 10px;
     font-size: 16px;
     border: 2px solid #c8aa6e;
@@ -617,7 +619,7 @@ fieldset#F2{
     font-size: 20px;
     text-align: center;
     color: #091428;
-    top: 52zpx;
+    top: 52px;
     right: 0px;
 }
 #sc{
