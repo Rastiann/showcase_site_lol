@@ -1,3 +1,8 @@
+
+
+
+/* Police d'écriture */
+
 @font-face {
     font-family: "QuadrataR";
     src:
@@ -25,6 +30,14 @@
       url("/font/Friz\ Quadrata\ Italic.ttf") format("truetype");
   }
 
+
+
+
+
+
+
+/* Réglages de la page */
+
 * {
     padding: 0;
     margin: 0;
@@ -35,8 +48,6 @@
 body{
     background-color: white;
 }
-
-
 
 
 
@@ -129,7 +140,7 @@ li a {
 .promo h1 { 
     font-family: "QuadrataB";
     color:#c8aa6e;
-    font-size: 130px;
+    font-size: 110px;
     /*text-shadow: 5px 5px #1a1a1a;*/
     text-shadow: 1px 1px 1px white;
 }
@@ -165,7 +176,6 @@ li a {
     flex: 0 1 calc(30% - 10px); /* la flex ne peux pas grandir, s'adapte à la place disponible. La taille de l'élément est 30% de la largeur de promo moins 10 px */
     background-size: cover;
     background-position: center;
-    
     height: 160px; 
     margin: 5px; 
     border-radius: 10%;
@@ -177,49 +187,48 @@ li a {
     color: black;
     padding: 5px; 
     transition: transform 0.3s ease; /* signifie que la transition va commencer lentement, s'accélérer au milieu, puis ralentir vers la fin. */
-    position: relative; /* permet de positionner les cases dans grid*/
+    position: relative; /* permet de positionner les cases dans la flex */
     font-family: "QuadrataB";
     text-align: center;
-}
-
-.grid .case p {
-    z-index: 1;
-    margin: 0; 
-    font-size: 20px;
-    display: none; 
-    transition: opacity 0.3s ease;
-}
-
-.grid .case::before {
-    content: ""; 
-    position: absolute;
-    top: 0;
-    left: 0; /* centre le filtre */
-    width: 100%;
-    height: 100%;
-    background: inherit; 
-    filter: blur(4px); 
-    z-index: 1; 
-    opacity: 0; 
-    transition: opacity 0.3s ease; 
-}
-.grid .case:hover::before {
-    opacity: 1;
-}
-
-.grid .case:hover p {
-    display: block;
+    overflow: hidden; /* cache le débordement du pseudo-élément */
 }
 
 .grid .case:hover {
     transform: scale(1.05); 
 }
 
-@media screen and (max-width: 768px) {
-    .grid .case p {
-        font-size: 12px;
-    }
+.grid .case p {
+    z-index: 1;
+    margin: 0; 
+    font-size: 17px;
+    display: none; 
+    transition: opacity 0.3s ease;
 }
+
+.grid .case::before { /* pseudo élément */
+    content: ""; /* sans contenue */
+    position: absolute;
+    top: 0;
+    left: 0; /* centre le filtre */
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    filter: blur(4px);  
+    opacity: 0;
+    transition: opacity 0.3s ease; 
+}
+.grid .case:hover::before {
+    opacity: 1; /* impossible d'animé avec display d'ou l'utilisation d'opacity */
+}
+
+.grid .case:hover p {
+    display: block;
+}
+
+.grid .case:hover .buy-button {
+    display: block; 
+}
+
 
 
 
@@ -237,6 +246,7 @@ li a {
     margin-top: 20px; 
     height: auto;
 }
+
 .boutique h1 {
     font-family: "QuadrataB";
     font-size: 60px;
@@ -250,26 +260,25 @@ li a {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px; 
-    padding: 20px; 
+    padding: 10px; 
 }
+
 .gridboutique .box {
     background-size: cover;
     background-position: center;
-    width: 30%; 
-    height: 200px; 
+    width: 30%;
+    height: 200px;
     border-radius: 10%; 
     display: flex;
     align-items: center;
     justify-content: start;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
     transition: transform 0.3s ease; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
-    flex-direction: column;
+    flex-direction: column; /* pour le texte */
 }
-.gridboutique .box:hover {
-    transform: scale(1.05); 
-}
+
 .gridboutique .box::before {
     content: ""; 
     position: absolute;
@@ -279,23 +288,26 @@ li a {
     height: 100%;
     background: inherit; 
     filter: blur(4px); 
-    z-index: 1; 
     opacity: 0; 
     transition: opacity 0.3s ease; 
 }
+
 .gridboutique .box:hover::before {
     opacity: 1; 
 }
+
 .gridboutique .box p {
-    position: relative; 
-    z-index: 2; 
-    margin: 0;
+    z-index: 1; 
     color: white; 
     font-family: "QuadrataR"; 
     font-size: 18px; 
     text-align: center; 
     display: none;
     font-size: 25px;
+}
+
+.gridboutique .box:hover {
+    transform: scale(1.05); 
 }
 
 .buy-button {
@@ -315,8 +327,7 @@ li a {
     margin-top: 10px;
     cursor: pointer;
     transition: 0.1s;
-    opacity: 0; 
-    visibility: hidden; 
+    display: none; 
     position: absolute; 
     bottom: 10px; 
     left: 50%;
@@ -324,30 +335,34 @@ li a {
     z-index: 2; 
 }
 
-.grid .case:hover .buy-button {
-    opacity: 1; 
-    visibility: visible; 
-}
-
 .gridboutique .box:hover .buy-button {
-    opacity: 1; 
-    visibility: visible; 
+    display: block; 
 }
 
 .gridboutique .box:hover p {
-    opacity: 1; 
     display: block; 
 }
 
 
-@media screen and (max-width: 768px) {
+
+
+
+
+
+
+/* media */
+
+@media screen and (max-width: 768px) { /* ajuster 2 par 2 les cases */
     .gridboutique .box {
         width: 45%; 
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .promo h1 {
+
+
+
+@media screen and (max-width: 1024px) { /* 3 états de la flex promo */ 
+    .promo h1 {                                /* 1 */
         font-size: 100px; 
     }
     .grid {
@@ -360,7 +375,7 @@ li a {
 }
 
 @media screen and (max-width: 768px) {
-    .promo h1 {
+    .promo h1 {                                /* 2 */
         font-size: 80px; 
     }
     .grid {
@@ -372,7 +387,19 @@ li a {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 650px) {
+    .grid {                                    /* 3 */
+        width: 100%; 
+    }
+    .grid .case {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+
+@media screen and (max-width: 480px) {  /* icomenu */
     header {
         flex-direction: column; 
         height: auto;
@@ -412,6 +439,30 @@ li a {
     }
 }
 
+
+
+@media screen and (max-width: 768px) { /* ajuster le texte dans la flex promo */
+    .grid .case p {
+        font-size: 12px;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) { /* ajuster le texte dans les mentions */
+    .mentions p {
+        font-size: 11px;
+    }
+}
+
+
+
+
+
+
+
+/* Mentions légales */
+
 .mentions {
     background-color: black;
     width: 100%;
@@ -428,7 +479,6 @@ li a {
     display: flex;
     gap: 3%;
     justify-content: center;
-    
 }
 
 .mentions .reseaux img {
@@ -462,7 +512,7 @@ li a {
    justify-content: center;
    flex-wrap: wrap;
    padding: 1%;
-   width: 40%;
+   width: 85%;
    text-align: center;
    
 }
@@ -478,6 +528,8 @@ li a {
 .mentions .supplémentaire p {
     color: white;
 }
+
+
 /*
 --------------------------------------------------
 -----------------MENU-----------------------------
