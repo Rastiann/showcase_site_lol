@@ -173,7 +173,8 @@ header ul a{
     border: 2px solid black;
     padding: 10px; 
     border-radius: 10%;
-    margin-top: 20px
+    margin-top: 70px
+
 }
 
 
@@ -287,6 +288,7 @@ header ul a{
     transition: transform 0.3s ease; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
     flex-direction: column; /* pour le texte */
+    padding-top: 3%;
 }
 
 .gridboutique .box::before {
@@ -443,6 +445,10 @@ header ul a{
     }
     .menu ul{
         width: 100px;
+    }
+    .icomenu .menu ul li ul{
+        left : -50px
+
     }
 }
 
