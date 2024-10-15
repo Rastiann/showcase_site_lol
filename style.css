@@ -342,9 +342,7 @@ header ul a{
     transition: 0.1s;
     display: none; 
     position: absolute; 
-    bottom: 10px; 
-    left: 50%;
-    transform: translateX(-50%); 
+    bottom: 10px;
     z-index: 2; 
 }
 
