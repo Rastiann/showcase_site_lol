@@ -308,6 +308,21 @@ header ul a{
     transform: scale(1.05); 
 }
 
+.gridboutique .box:hover .buy-button {
+    display: block; 
+}
+
+.gridboutique .box:hover p {
+    display: block; 
+}
+
+.gridboutique div p{
+    text-shadow: 1px 1px #3C3C41;
+}
+
+
+/* Boutton */
+
 .buy-button {
     font-family: 'Marcellus SC', serif;
     font-size: 15px;
@@ -332,20 +347,6 @@ header ul a{
     transform: translateX(-50%); 
     z-index: 2; 
 }
-
-.gridboutique .box:hover .buy-button {
-    display: block; 
-}
-
-.gridboutique .box:hover p {
-    display: block; 
-}
-
-.gridboutique div p{
-    text-shadow: 1px 1px #3C3C41;
-}
-
-
 
 
 
