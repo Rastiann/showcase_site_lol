@@ -433,6 +433,9 @@ header ul a{
         left : -50px
 
     }
+    h5{
+        padding-top: 16px;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -532,6 +535,22 @@ header ul a{
 .mentions .supplémentaire p {
     color: white;
 }
+
+/*-----------------WEBSITE TITLE--------------------*/
+h5{
+    position: absolute;
+    font-size: 22px;
+    color: white;
+    transform: rotate(-10deg);
+    margin: 0 25px;
+    font-family: "QuadrataM";
+    text-shadow: 2px 2px 1px black;
+    border-bottom: 1px solid white;
+
+}
+
+
+
 /*-----------------ROTATE PROMO--------------------*/
 .titleprom{
     transform: rotate(-7deg);
