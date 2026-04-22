@@ -28,4 +28,3 @@ Le site s’ouvrira automatiquement dans votre navigateur.
 ## Équipe
 - Bastian COCHARD  
 - Gaetan FERREIRA
-- 
