@@ -1,5 +1,7 @@
 # Site vitrine - Vente de skins League of Legends
 
+![acceuil](image/image.png)
+
 ## Description
 Ce projet est un site vitrine réalisé dans le cadre du BUT Informatique.  
 Il s'agit d’un site de présentation dédié à la vente de skins *League of Legends*.
